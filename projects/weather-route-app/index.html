@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Trip Weather Planner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        h4 {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .weather-container {
+            padding: 20px;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .weather-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .weather-item h1 {
+            margin: 10px 0px;
+        }
+        .weather-item p {
+            margin: 0px;
+        }
+
+        .cityField {
+            margin: 5px 10px;
+        }
+         /* Button Styling */
+        button {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        input {
+            font-size: 14px;
+            border-radius: 6px;
+            line-height: 1.5;
+            padding: 5px 10px;
+            transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+            border: 2px solid #dee1e2;
+            color: rgb(14, 14, 16);
+            background: #dee1e2;
+            /* display: block; */
+            height: 36px;
+            :hover {
+                border-color: #ccc;
+            }
+            :focus{
+                border-color: #9147ff;
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter City Names and How Long You Will Be There:</h2>
+    <h4>Max Weather Forecast: 5 Days</h4>
+    <div id="cityFields">
+        <input type="text" placeholder="Enter city name" class="cityField">
+        <input type="text" placeholder="Enter stay duration (days)" class="dayField"><br>
+    </div>
+    <button onclick="addCityField()">Add Another City</button>
+    <button onclick="getCityAndDayList()">Submit</button>
+
+    <div class="weather-container" id="weatherContainer">
+        <!-- Weather details will be inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
