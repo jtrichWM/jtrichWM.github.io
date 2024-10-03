@@ -76,6 +76,7 @@
 
         /* Projects Section */
         .projects-container {
+            width: 100%;
             display: flex;
             justify-content: center;
             padding: 40px;
@@ -85,31 +86,34 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            width: 75%; /* Now takes 75% of the width */
+            width: 75%;
         }
 
         .project-card {
             position: relative;
-            background-size: cover;
-            background-position: center;
             padding: 20px;
             height: 400px; /* Adjusted height for a bigger size */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: white;
             font-weight: bold;
             font-size: 1.4em;
             text-decoration: none;
             transition: transform 0.3s ease, background-size 0.3s ease;
+            overflow: hidden;
+            background-image: var(--left-image), var(--right-top-image), var(--right-bottom-image);
+            background-repeat: no-repeat;
+            background-size: 65% 100%, 35% 50%, 35% 50%; /* Size: left 50%, right top & bottom 50% each */
+            background-position: left center, right top, right bottom;
         }
 
         /* Hover effect: enlarges the image and makes it pop */
         .project-card:hover {
-            transform: scale(1.05); /* Slightly enlarges the project card */
+            transform: scale(1.05); 
         }
 
         .project-card::before {
@@ -147,21 +151,25 @@
     <!-- Projects Section -->
     <section class="projects-container">
         <div class="projects-grid">
-            <a href="projects/weather-route-app/index.html" class="project-card" style="background-image: url('images/CloudTrail_1.JPG');">
-                <h2>Weather Tool</h2>
+            <a href="projects/weather-route-app/index.html" class="project-card"
+                style="--left-image: url('images/WeatherCode.png'); --right-top-image: url('images/WeatherData.png'); --right-bottom-image: url('images/SunnyClouds.jpg');">
+                <h2>Road Trip Weather Planner</h2>
             </a>
-            <a href="projects/electrician-calculator/index.html" class="project-card" style="background-image: url('images/calculator.png');">
+            <a href="projects/electrician-calculator/index.html" class="project-card"
+                style="--left-image: url('images/DogHat.png'); --right-top-image: url('images/DogHat.png'); --right-bottom-image: url('images/DogHat.png');">
                 <h2>Electrician Calculator</h2>
             </a>
-            <a href="projects/minesweeper/index.html" class="project-card" style="background-image: url('images/minesweeper.png');">
+            <a href="projects/minesweeper/index.html" class="project-card"
+                style="--left-image: url('images/DogHat.png'); --right-top-image: url('images/DogHat.png'); --right-bottom-image: url('images/DogHat.png');">
                 <h2>Minesweeper Game</h2>
             </a>
-            <a href="projects/overlanding-rig/index.html" class="project-card" style="background-image: url('images/overlanding.png');">
+            <a href="projects/overlanding-rig/index.html" class="project-card"
+                style="--left-image: url('images/DogHat.png'); --right-top-image: url('images/DogHat.png'); --right-bottom-image: url('images/DogHat.png');">
                 <h2>Overlanding Rig Builder</h2>
             </a>
-            
         </div>
     </section>
+    
 
     <footer style="text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 40px;">
         © 2024 Jake Richardson | <a href="mailto:jakerichardsont@gmail.com" style="color: #1da1f2;">jakerichardsont@gmail.com</a> | 
