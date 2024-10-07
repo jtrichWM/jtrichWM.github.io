@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/shared-styles.css">
     <title>Road Trip Weather Planner</title>
     <style>
         body {
@@ -30,37 +31,9 @@
 
         /* Header */
         header {
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            position: unset; /* Unfix the header*/
         }
-
-        /* Center the name and float the links to the right */
-        header h1 {
-            font-size: 2em;
-            margin: 0;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .header-links {
-            position: absolute;
-            right: 20px;
-        }
-
-        .header-links a {
-            color: white;
-            margin-left: 15px;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
+        
 
         .weather-container {
             padding: 20px;
